@@ -3,9 +3,9 @@
     class="flex flex-row shadow-lg rounded pl-2 text-lg bg-white items-center justify-between text-dark h-24"
   >
     <div>{{ post.title }}</div>
-    <div class="flex flex-col text-primary">
-      <PostBtn>up</PostBtn>
-      <PostBtn>dn</PostBtn>
+    <div class="flex flex-col text-primary h-24">
+      <PostBtn v-if="prevBtn">up</PostBtn>
+      <PostBtn v-if="nextBtn">dn</PostBtn>
     </div>
   </div>
 </template>
