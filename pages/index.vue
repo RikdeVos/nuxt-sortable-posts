@@ -1,70 +1,56 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        temper-sortable-posts
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="background">
+    <div class="container mx-auto mt-12">
+      <div class="flex flex-row flex-fill">
+        <div class="w-3/6 mr-24">
+          <h2 class="text-white text-2xl font-medium">Sortable Post List</h2>
+          <Post
+            v-for="post of posts"
+            :key="post.id"
+            :post="post"
+            class="my-4"
+          ></Post>
+        </div>
+        <div class="w-3/6">
+          <Panel :title="'List of actions to be committed'">
+            <div class="bg-white rounded shadow-lg">
+              <Snapshot
+                :title="'Moved post 1 from index 2 to index 1'"
+                class="border-b border-light"
+              ></Snapshot>
+              <Snapshot
+                :title="'Moved post 1 from index 2 to index 1'"
+              ></Snapshot>
+            </div>
+          </Panel>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  components: {},
+  data() {
+    return {
+      posts: [
+        {
+          title: 'Post 1',
+          id: 1,
+        },
+        {
+          title: 'Post 2',
+          id: 2,
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
 .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  /* @apply min-h-screen flex justify-center items-center text-center mx-auto; */
 }
 </style>
