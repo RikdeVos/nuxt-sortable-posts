@@ -45,9 +45,9 @@ export const actions = {
    */
   async fetchPosts({ commit }) {
     // Get posts from API
-    const allPosts = await this.$axios.$get(
-      `https://jsonplaceholder.typicode.com/posts`
-    )
+    const allPosts = (
+      await this.$axios.get(`https://jsonplaceholder.typicode.com/posts`)
+    ).data
 
     // Grab only first 5 posts, and map them to a title, id, index.
     const posts = allPosts.slice(0, 5).map((post, index) => ({

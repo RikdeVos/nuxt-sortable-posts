@@ -1,4 +1,4 @@
-# temper-sortable-posts
+# Sortable Posts
 
 ## Build Setup
 
@@ -12,9 +12,15 @@ $ yarn dev
 # build for production and launch server
 $ yarn build
 $ yarn start
-
-# generate static project
-$ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Unit Tests
+
+To run unit tests, run
+
+```bash
+$ yarn test
+```
+
+All (unit) tests can be found in `./test`. This could be extended by adding
+integration tests. Tests for Vuex can be found in `./test/store`.

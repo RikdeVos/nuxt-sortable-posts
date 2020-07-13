@@ -4,10 +4,16 @@
   >
     <div>{{ post.title }}</div>
     <div class="flex flex-col text-primary h-24">
-      <PostBtn v-if="prevBtn" @click.native="$emit('up')"
+      <PostBtn
+        v-if="upBtn"
+        data-testid="move-up-btn"
+        @click.native="$emit('up')"
         ><i class="fas fa-chevron-up"></i
       ></PostBtn>
-      <PostBtn v-if="nextBtn" @click.native="$emit('down')"
+      <PostBtn
+        v-if="downBtn"
+        data-testid="move-down-btn"
+        @click.native="$emit('down')"
         ><i class="fas fa-chevron-down"></i
       ></PostBtn>
     </div>
@@ -21,12 +27,12 @@ export default {
       type: Object,
       required: true,
     },
-    prevBtn: {
+    upBtn: {
       type: Boolean,
       required: false,
       default: false,
     },
-    nextBtn: {
+    downBtn: {
       type: Boolean,
       required: false,
       default: false,

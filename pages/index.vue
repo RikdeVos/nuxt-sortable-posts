@@ -11,8 +11,8 @@
               v-for="post of posts"
               :key="post.id"
               :post="post"
-              :prev-btn="post.index !== 0"
-              :next-btn="post.index + 1 < posts.length"
+              :up-btn="post.index !== 0"
+              :down-btn="post.index + 1 < posts.length"
               :style="{ top: post.index * 116 + 'px' }"
               class="w-full absolute transition-all ease-out-bounce duration-300"
               @up="upBtn(post)"
@@ -57,7 +57,6 @@ export default {
       this.$store.commit('move_post', { post, direction: 1 })
     },
     timeTravelBtn(snapshot) {
-      console.log('asdf')
       this.$store.commit('time_travel', { snapshot })
     },
   },
