@@ -25,6 +25,7 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     transitionProperty: ['responsive', 'hover', 'focus'],
+    borderWidth: ['responsive', 'last'],
   },
   plugins: [],
   purge: {
