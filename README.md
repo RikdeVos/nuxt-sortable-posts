@@ -1,5 +1,14 @@
 # Sortable Posts
 
+## Used Frameworks/Libraries
+
+- Nuxt: Vue.js Framework to build the app.
+- Vuex: State management library for Vue.js
+- Tailwind CSS: CSS Framework.
+- Jest: JS testing framework.
+- Axios: Promise based HTTP client.
+- Lodash: JS helper functions, in this case for cloning objects.
+
 ## Build Setup
 
 ```bash

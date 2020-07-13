@@ -1,7 +1,7 @@
 <template>
   <div class="background">
-    <div class="container mx-auto mt-12 p-4">
-      <div class="flex flex-col flex-fill md:flex-row">
+    <div class="container mx-auto p-4">
+      <div class="flex flex-col flex-fill md:flex-row mt-12">
         <div class="w-full md:w-3/6 mr-24">
           <h2 class="text-white text-2xl font-medium mb-4">
             Sortable Post List
