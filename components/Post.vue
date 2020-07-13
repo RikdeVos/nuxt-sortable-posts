@@ -4,8 +4,12 @@
   >
     <div>{{ post.title }}</div>
     <div class="flex flex-col text-primary h-24">
-      <PostBtn v-if="prevBtn" @click.native="$emit('up')">up</PostBtn>
-      <PostBtn v-if="nextBtn" @click.native="$emit('down')">dn</PostBtn>
+      <PostBtn v-if="prevBtn" @click.native="$emit('up')"
+        ><i class="fas fa-chevron-up"></i
+      ></PostBtn>
+      <PostBtn v-if="nextBtn" @click.native="$emit('down')"
+        ><i class="fas fa-chevron-down"></i
+      ></PostBtn>
     </div>
   </div>
 </template>

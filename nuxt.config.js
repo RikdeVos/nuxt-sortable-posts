@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/main.css', '@fortawesome/fontawesome-free/css/all.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
