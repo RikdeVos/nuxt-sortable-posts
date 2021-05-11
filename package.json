@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "@nuxtjs/axios": "^5.11.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
